@@ -2,17 +2,27 @@
 
 This website is designed to educate its users about the city of Cologne.
 
-**It is a work in progress.**
+**This is an ongoing project and is currently under development.**
 
-and also is open source so that means change it and use it as you want, you can learn or use it as a template to make your own website.
+This project is open source, so you are free to fork it, modify it, and use it as you want. You can also use it as a learning tool or as a template to make your own website.
+
+## Versioning Information
+
+This project uses semantic versioning to indicate changes:
+
+- **Major changes** (e.g., UI revamp or significant additions) increment the first number.
+- **Minor changes** (e.g., small adjustments or additional content) increment the second number.
+- **Bug fixes** increment the third number.
+
+For instance:
+- `V1.0.0` indicates a major change.
+- `V1.1.0` indicates a minor change.
+- `V1.0.1` indicates a bug fix.
+
+The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
 
 # License
 
-This project is licensed under the [MIT LICENSE](LICENSE).
+- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## The version numbers show here about what has changed.
-
-The first number shows the major changes, the second number shows the minor changes and the third number shows the bug fixes.
-Major changes could be things such as a revamp of the ui or additions, a minor change could be moving somthing a little or adding some more text or images, and the third number is for bug fixes. 
-An example could be V1.0.0 would be a major change, V1.1.0 would be a minor change and V1.0.1 would be a bug fix. Im going to start with V1.0.0 because i have made a base that i like and plan on adding to it and bug testing.
-
+<i class="fa fa-copyright" aria-hidden="true"></i> This project is licensed under the [MIT LICENSE](LICENSE).
