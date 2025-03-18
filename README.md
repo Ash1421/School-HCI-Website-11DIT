@@ -2,7 +2,7 @@
 
 This website is designed to educate its users about the city of Cologne.
 
-**This is an ongoing project and is currently under development.**
+**This is an ongoing project and is currently under development.** [![Stage](https://img.shields.io/badge/Development-Under_Development-yellow)](https://shields.io)
 
 This project is open source, so you are free to fork it, modify it, and use it as you want. You can also use it as a learning tool or as a template to make your own website.
 
@@ -20,6 +20,28 @@ For instance:
 - `V1.0.1` indicates a bug fix.
 
 The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
+
+### The current version is [![Version](https://img.shields.io/badge/Version-2.2.1-informational)](https://shields.io)
+
+## Docker Setup
+
+To set up the project using Docker, follow these steps:
+
+1. Download the latest release from GitHub.
+2. Build and start the Docker container with Docker Compose:
+
+   ```bash
+   docker-compose up --build -d
+   ```
+
+Alternatively, you can start the container using Docker:
+
+   ```bash
+   docker run -d -p 57854:80 --name koln-container koln-site
+   ```
+
+The site will be accessible at:  
+[http://localhost:57854](http://localhost:57854)
 
 # License
 

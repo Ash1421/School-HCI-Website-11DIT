@@ -1,0 +1,6 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "57854:80"  # Expose port 57854 on the host machine and map to port 80 in the container
