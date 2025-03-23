@@ -21,7 +21,7 @@ For instance:
 
 The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
 
-### The current version is [![Version](https://img.shields.io/badge/Version-2.3.2-informational)](https://shields.io)
+### The current version is [![Version](https://img.shields.io/badge/Version-2.4.2-informational)](https://shields.io)
 
 ## Docker Setup
 
@@ -34,7 +34,7 @@ To set up the project using Docker, follow these steps:
    docker-compose up --build -d
    ```
 
-Alternatively, you can start the container using Docker:
+Alternatively, you can start the container using Docker, it is recommended that you use docker compose to build and start the container:
 
    ```bash
    docker run -d -p 57854:80 --name koln-container koln-site
