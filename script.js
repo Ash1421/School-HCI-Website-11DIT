@@ -18,3 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
         themeToggle.classList.toggle("active");
     });
 });
+
+const themeToggle = document.querySelector('.theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+});
