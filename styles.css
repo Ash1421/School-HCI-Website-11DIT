@@ -80,6 +80,7 @@ footer {
     width: 60px;
     height: 30px;
     cursor: pointer;
+    border-radius: 30px;
 }
 
 .theme-toggle span {
@@ -98,24 +99,24 @@ footer {
 .theme-toggle span:first-child {
     background-color: #fff;
     color: #333;
+    transform: translateX(100%);
 }
 
 .theme-toggle span:last-child {
     background-color: #333;
     color: #fff;
-    transform: translateX(100%);
+    transform: translateX(0);
 }
 
 .theme-toggle.active span:first-child {
-    transform: translateX(-100%);
+    transform: translateX(0);
 }
 
 .theme-toggle.active span:last-child {
-    transform: translateX(0);
+    transform: translateX(100%);
 }
 
 body.dark {
     background-color: #333;
     color: #fff;
 }
-
