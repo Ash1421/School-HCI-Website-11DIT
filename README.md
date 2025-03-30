@@ -21,7 +21,7 @@ For instance:
 
 The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
 
-### The current version is [![Version](https://img.shields.io/badge/Version-2.4.2-informational)](https://shields.io)
+### The current version is [![Version](https://img.shields.io/badge/Version-2.5.2-informational)](https://shields.io)
 
 ## Docker Setup
 
@@ -42,6 +42,9 @@ Alternatively, you can start the container using Docker, it is recommended that 
 
 The site will be accessible at:  
 [http://localhost:57854](http://localhost:57854)
+
+**Please note if you are hosting it on a remote machine you will need to chage the ip from localhost, or port forward to access the site.**
+
 
 # License
 

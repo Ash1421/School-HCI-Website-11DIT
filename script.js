@@ -9,4 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
             section.scrollIntoView({ behavior: "smooth" });
         });
     });
+
+    // Add event listener to theme toggle
+    const themeToggle = document.querySelector(".theme-toggle");
+    const body = document.body;
+    themeToggle.addEventListener("click", function() {
+        body.classList.toggle("dark");
+        themeToggle.classList.toggle("active");
+    });
 });
+
