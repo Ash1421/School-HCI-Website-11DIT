@@ -2,10 +2,11 @@
 
 This website is designed to educate its users about the city of Cologne.
 
-**This is an ongoing project and is [![Stage](https://img.shields.io/badge/Development-Under_Development-yellow)](https://shields.io.** )
+**This is an ongoing project and is** [![Stage](https://img.shields.io/badge/Development-Under_Development-yellow)](https://shields.io. )
 
 This project is open source, so you are free to fork it, modify it, and use it as you want. You can also use it as a learning tool or as a template to make your own website.
 
+**I will try to describe the finished code as good as i can, feel free to learn from it.**
 ## Versioning Information
 
 This project uses semantic versioning to indicate changes:
@@ -16,8 +17,8 @@ This project uses semantic versioning to indicate changes:
 
 For instance:
 - `V1.0.0` indicates a major change.
-- `V1.1.0` indicates a minor change.
-- `V1.0.1` indicates a bug fix.
+- `V0.1.0` indicates a minor change.
+- `V0.0.1` indicates a bug fix.
 
 The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
 
