@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Add event listener to theme toggle
+
     const themeToggle = document.querySelector(".theme-toggle");
     const body = document.body;
     themeToggle.addEventListener("click", function() {
@@ -22,5 +22,17 @@ document.addEventListener("DOMContentLoaded", function() {
 const themeToggle = document.querySelector('.theme-toggle');
 
 themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+});
+
+const themeToggle = document.querySelector('.theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+  const lightText = themeToggle.querySelector('span:first-child');
+  const darkText = themeToggle.querySelector('span:last-child');
+
+  lightText.classList.toggle('active');
+  darkText.classList.toggle('active');
+
   document.body.classList.toggle('dark-theme');
 });
