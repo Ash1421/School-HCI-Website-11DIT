@@ -22,12 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
 const themeToggle = document.querySelector('.theme-toggle');
 
 themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme');
-});
-
-const themeToggle = document.querySelector('.theme-toggle');
-
-themeToggle.addEventListener('click', () => {
   const lightText = themeToggle.querySelector('span:first-child');
   const darkText = themeToggle.querySelector('span:last-child');
 
