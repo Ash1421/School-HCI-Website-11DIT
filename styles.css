@@ -1,147 +1,74 @@
+/* Set the default colors for the page */
+:root {
+  --color-bg: #ffffff; /* white */
+  --color-fg: #000000; /* black */
+}
+
+/* When the user enables dark mode, change the colors */
+:root.dark {
+  --color-bg: #343434; /* dark gray */
+  --color-fg: #ffffff; /* white */
+}
+
+/* Style the body with the default colors */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #fff;
-    color: #333;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav li {
-    margin-right: 10px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-}
-
-section {
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-}
-
-h1 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-
-.image-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    clear: both;
-}
-
-.theme-toggle {
-    display: block;
-    position: relative;
-    width: 60px;
-    height: 30px;
-    cursor: pointer;
-    border-radius: 30px;
-}
-
-.theme-toggle span {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-    text-align: center;
-    line-height: 30px;
-    transition: all 0.3s;
-}
-
-.theme-toggle span:first-child {
-    background-color: #fff;
-    color: #333;
-    transform: translateX(100%);
-}
-
-.theme-toggle span:last-child {
-    background-color: #333;
-    color: #fff;
-    transform: translateX(0);
-}
-
-.theme-toggle.active span:first-child {
-    transform: translateX(0);
-}
-
-.theme-toggle.active span:last-child {
-    transform: translateX(100%);
-}
-
-body.dark {
-    background-color: #333;
-    color: #fff;
-}
-
-.theme-toggle-wrapper {
-  position: absolute;
+/* Add a label to toggle the theme */
+.toggle_label {
+  position: fixed;
   top: 10px;
   right: 10px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.dark-theme {
+.toggle_label:hover {
+  background-color: #f0f0f0;
+}
+
+/* Add a slider to toggle the theme */
+.slider {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.4s;
+}
+
+/* Add a circle to the slider */
+.slider:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* When the slider is checked, move the circle to the right and change its color */
+.slider:checked + .slider:before {
+  transform: translate(100%, -50%);
   background-color: #333;
+}
+
+/* Add classes to style the sun and moon emojis */
+.moon {
   color: #fff;
 }
-.theme-toggle span {
-  display: none;
+
+.sun {
+  color: #333;
 }
 
-.theme-toggle span.active {
-  display: block;
-}
-
-/* Add this to your existing CSS */
-.theme-toggle-wrapper {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}

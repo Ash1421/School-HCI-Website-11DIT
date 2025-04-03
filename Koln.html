@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
     <title>Köln City</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="theme-toggle-wrapper">
-        <button class="theme-toggle">
-            <span class="active">Light</span>
-            <span>Dark</span>
-        </button>
+    <div class="container">
+        <!-- The toggle button is a checkbox with a label that has a class of "toggle_label". -->
+        <label class="toggle_label">
+            <!-- The input is a checkbox with an id of "mode" and a class of "toggle". -->
+            <input type="checkbox" id="mode" class="toggle">
+            <!-- The slider is a span with a class of "slider round". -->
+            <span class="slider round">
+                <!-- The moon and sun icons are i tags with classes of "fa-solid fa-moon fa-lg fa-spin moon" and "fa-solid fa-sun fa-spin fa-lg sun". -->
+                <i class="fa-solid fa-moon fa-lg fa-spin moon"></i>
+                <i class="fa-solid fa-sun fa-spin fa-lg sun"></i>
+            </span>
+        </label>
     </div>
     <header>
         <nav>
             <ul>
+                <!-- The navigation bar has five links to different sections of the page. -->
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Köln</a></li>
                 <li><a href="#attractions">Attractions</a></li>
@@ -25,11 +34,13 @@
         </nav>
     </header>
     <main>
+        <!-- The main section has five sections, each with a unique id and content. -->
         <section id="home">
             <h1>Welcome to Köln</h1>
             <p>Köln is a city with a rich history dating back to the Roman Empire. It offers a unique blend of ancient architecture and modern attractions.</p>
             <p>Explore the vibrant neighborhoods, each with its own distinct character and charm.</p>
             <div class="image-grid">
+                <!-- The image grid contains two images, one of the Köln Cathedral and one of the Köln Skyview. -->
                 <img src="Images/köln_cathedral.jpg" alt="Köln Cathedral">
                 <img src="Images/köln_skyveiw.jpg" alt="Köln Skyview">
             </div>
@@ -41,6 +52,7 @@
             <p>The city is also renowned for its hospitality and diverse culinary offerings, making it a must-visit destination.</p>
             <p>One of the most famous bars in Köln is the Brauhaus FRÜH am Dom. The Brauhaus FRÜH am Dom is a traditional German pub located at Am Hof 12-18, 50667 Köln, Germany. When you enter the bar, the waiters might try to sell their own beer and mark it on your cup stand. They draw a wagon wheel with the pen to show how many drinks you have had.</p>
             <div class="image-grid">
+                <!-- The image grid contains two images, one of the Brauhaus FRÜH am Dom bar and one of the Kolsch wagon wheel coaster. -->
                 <img src="Images/V2.4.2-Images/colonge_bar.jpg" alt="Brauhaus FRÜH am Dom">
                 <img src="Images/V2.4.2-Images/Kolsch_coaster.JPG" alt="Kolsch Wagon Wheel Coaster">
             </div>
@@ -48,6 +60,7 @@
         <section id="attractions">
             <h1>Attractions</h1>
             <ul>
+                <!-- The attractions section contains an unordered list of nine items, each with a different location in Köln. -->
                 <li>Köln Cathedral</li>
                 <li>Roman-Germanic Museum</li>
                 <li>Hohenzollern Bridge</li>
@@ -59,6 +72,7 @@
                 <li>The Melatenfriedhof</li>
             </ul>
             <div class="image-grid">
+                <!-- The image grid contains two images, one of the Hohenzollern Bridge and one of Phantasialand. -->
                 <img src="Images/hohenzollern_bridge.jpg" alt="Hohenzollern Bridge">
                 <img src="Images/phantasialand.jpg" alt="Phantasialand">
             </div>
@@ -72,6 +86,7 @@
                 The Köln Summer Festival is a fun and lively celebration that takes place in the summer. It features live music, food, and other activities.
             </p>
             <div class="image-grid">
+                <!-- The image grid contains two images, one of the Köln Carnival and one of the Köln Christmas Market. -->
                 <img src="Images/köln_carnival.jpg" alt="Köln Carnival">
                 <img src="Images/köln_christmas_market.jpg" alt="Köln Christmas Market">
             </div>
@@ -93,6 +108,7 @@
     <footer>
         <p>&copy; 2025 Ash1421</p>
     </footer>
+    <!-- The script.js file is linked to the page and is used to add interactivity to the page. -->
     <script src="script.js"></script>
 </body>
 </html>
