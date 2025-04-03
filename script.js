@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             const sectionId = link.getAttribute("href");
             const section = document.querySelector(sectionId);
+            // Scroll smoothly to the section
             section.scrollIntoView({ behavior: "smooth" });
         });
     });
@@ -14,15 +15,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.getElementById('mode');
     toggleButton.addEventListener('change', () => {
         if (toggleButton.checked) {
+            // Enable dark mode
             document.documentElement.classList.add('dark');
             localStorage.setItem('mode', 'dark');
         } else {
+            // Enable light mode
             document.documentElement.classList.remove('dark');
             localStorage.setItem('mode', 'light');
         }
     });
 
-    // Set initial theme
+    // Set initial theme based on local storage
     const currentTheme = localStorage.getItem('mode');
     if (currentTheme === 'dark') {
         toggleButton.checked = true;
