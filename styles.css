@@ -1,159 +1,121 @@
-/* Set the default colors for the page using CSS variables for easy theming */
+/* Set the default colors for the page */
 :root {
-  --color-bg: #f2f2f2; /* light gray for background */
-  --color-fg: #333; /* dark gray for text */
-  --color-header: #333; /* dark gray for header */
-  --color-footer: #333; /* dark gray for footer */
+  --color-bg: #f2f2f2; /* light gray */
+  --color-fg: #333; /* dark gray */
 }
 
-/* When the user enables dark mode, change the colors to a dark theme */
+/* When the user enables dark mode, change the colors */
 :root.dark {
-  --color-bg: #343434; /* dark gray for background */
-  --color-fg: #fff; /* white for text */
-  --color-header: #fff; /* white for header */
-  --color-footer: #fff; /* white for footer */
+  --color-bg: #343434; /* dark gray */
+  --color-fg: #fff; /* white */
 }
 
-/* Style the body with the default colors and remove default margin */
+/* Style the body with the default colors */
 body {
-  font-family: Arial, sans-serif; /* Use a sans-serif font for body text */
-  margin: 0; /* Remove default margin */
-  background-color: var(--color-bg); /* Use variable for background color */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--color-bg);
 }
 
-/* Style the header with the default header and text colors, and center align text */
-header {
-  background-color: var(--color-header); /* Use variable for header background */
-  color: var(--color-fg); /* Use variable for text color */
-  padding: 10px; /* Add padding to header */
-  text-align: center; /* Center align text */
-}
-
-/* Style the navigation menu with no list style, zero margin and padding, and flexbox layout */
-nav ul {
-  list-style: none; /* Remove bullet points from list */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space items evenly */
-}
-
-/* Add margin to the right of navigation items */
-nav li {
-  margin-right: 10px; /* Add margin to the right */
-}
-
-/* Style links in the navigation with text color and no underline */
-nav a {
-  color: var(--color-fg); /* Use variable for link color */
-  text-decoration: none; /* Remove underline from links */
-}
-
-/* Style the main content area with flexbox layout and centered items */
 main {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Arrange items in a column */
-  align-items: center; /* Center items horizontally */
-  padding: 10px; /* Add padding to main content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-/* Style sections with a white background, padding, margin, and box shadow */
 section {
-  background-color: #fff; /* Set background to white */
-  padding: 10px; /* Add padding inside sections */
-  margin-bottom: 10px; /* Add margin below sections */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  width: 80%; /* Set section width */
+  background-color: var(--color-fg);
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  color: var(--color-bg);
 }
 
-/* Style main headings with a specific font size and margin */
 h1 {
-  font-size: 18px; /* Set font size for headings */
-  margin-bottom: 5px; /* Add margin below headings */
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
-/* Style paragraphs with a specific font size and margin */
 p {
-  font-size: 14px; /* Set font size for paragraphs */
-  margin-bottom: 10px; /* Add margin below paragraphs */
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-/* Style an image grid with two columns and a gap between items */
 .image-grid {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(2, 1fr); /* Define two equal columns */
-  grid-gap: 10px; /* Add gap between grid items */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 
-/* Style images in the grid to fit their container, maintain aspect ratio, and have rounded corners */
 .image-grid img {
-  width: 100%; /* Make images fill their container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Round the corners of images */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* Style the footer with the default footer and text colors, and center align text */
 footer {
-  background-color: var(--color-footer); /* Use variable for footer background */
-  color: var(--color-fg); /* Use variable for text color */
-  padding: 10px; /* Add padding to footer */
-  text-align: center; /* Center align text */
-  clear: both; /* Ensure footer is below floated elements */
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+  padding: 10px;
+  text-align: center;
+  clear: both;
 }
 
-/* Style a fixed position label for toggling themes, with a white background and rounded corners */
+/* Add a label to toggle the theme */
 .toggle_label {
-  position: fixed; /* Fix position relative to viewport */
-  top: 10px; /* Position from top */
-  right: 10px; /* Position from right */
-  z-index: 1000; /* Ensure it's above other elements */
-  background-color: #fff; /* White background for contrast */
-  border-radius: 50%; /* Make it circular */
-  padding: 10px; /* Add padding inside */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
 }
 
-/* Change the background color of the toggle label on hover */
 .toggle_label:hover {
-  background-color: #f0f0f0; /* Light gray to indicate hover state */
+  background-color: #f0f0f0;
 }
 
-/* Style the slider for theme toggling with a gray background and rounded ends */
+/* Add a slider to toggle the theme */
 .slider {
-  width: 40px; /* Set width of slider */
-  height: 20px; /* Set height of slider */
-  background-color: #ccc; /* Light gray background */
-  border-radius: 10px; /* Round the ends */
-  position: relative; /* Position relative for child elements */
-  transition: 0.4s; /* Smooth transition for state changes */
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.4s;
 }
 
-/* Style the circle inside the slider, centered by default */
+/* Add a circle to the slider */
 .slider:before {
-  content: ""; /* Empty content for styling */
-  position: absolute; /* Position relative to slider */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Center transform */
-  width: 20px; /* Width of circle */
-  height: 20px; /* Height of circle */
-  background-color: #fff; /* White background for contrast */
-  border-radius: 50%; /* Make it circular */
-  transition: 0.4s; /* Smooth transition for state changes */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
 }
 
-/* Move the circle to the right and change its color when checked */
+/* When the slider is checked, move the circle to the right and change its color */
 .slider:checked + .slider:before {
-  transform: translate(100%, -50%); /* Move circle to the right */
-  background-color: #333; /* Change color to dark gray */
+  transform: translate(100%, -50%);
+  background-color: #333;
 }
 
-/* Style the moon emoji with white color for visibility on dark backgrounds */
+/* Add classes to style the sun and moon emojis */
 .moon {
-  color: #fff; /* White color for contrast on dark backgrounds */
+  color: #fff;
 }
 
-/* Style the sun emoji with dark gray color for visibility on light backgrounds */
 .sun {
-  color: #333; /* Dark gray color for contrast on light backgrounds */
+  color: #333;
 }
+
+
