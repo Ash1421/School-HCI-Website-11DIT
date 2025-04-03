@@ -1,20 +1,54 @@
-/* Set the default colors for the page */
 :root {
   --color-bg: #f2f2f2; /* light gray */
   --color-fg: #333; /* dark gray */
 }
 
-/* When the user enables dark mode, change the colors */
 :root.dark {
   --color-bg: #343434; /* dark gray */
   --color-fg: #fff; /* white */
 }
 
-/* Style the body with the default colors */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: var(--color-bg);
+}
+
+nav {
+  padding: 1.5rem 2rem;
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.checkbtn {
+  font-size: 1.5rem;
+  color: var(--color-bg);
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  background: var(--color-fg);
+  z-index: 1;
+  width: 200px;
+}
+
+.nav-mobile a {
+  color: var(--color-bg);
+  padding: 1rem 1.5rem;
+  display: block;
+}
+
+#check:checked ~ .nav-mobile {
+  display: block;
 }
 
 main {
@@ -41,18 +75,6 @@ h1 {
 p {
   font-size: 14px;
   margin-bottom: 10px;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
 
 footer {
@@ -117,5 +139,3 @@ footer {
 .sun {
   color: #333;
 }
-
-
