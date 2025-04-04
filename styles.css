@@ -55,7 +55,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10rem; /* add padding to the top of the page */
+  padding-top: 8rem; /* add padding to the top of the page */
 }
 
 section {
@@ -154,7 +154,7 @@ input:checked + .slider:before {
 /* Image grid styling */
 img {
   max-width: 100%;
-  height: 200px;
+  height: 250px;
   display: block;
   margin: 0 auto;
 }
