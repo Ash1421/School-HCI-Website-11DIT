@@ -85,6 +85,11 @@ footer {
   clear: both;
 }
 
+/* Hide checkboxes */
+input[type="checkbox"] {
+  display: none;
+}
+
 /* Add a label to toggle the theme */
 .toggle_label {
   position: fixed;
@@ -95,6 +100,11 @@ footer {
   border-radius: 50%;
   padding: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
 .toggle_label:hover {
@@ -109,6 +119,7 @@ footer {
   border-radius: 10px;
   position: relative;
   transition: 0.4s;
+  display: inline-block;
 }
 
 /* Add a circle to the slider */
@@ -116,8 +127,8 @@ footer {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translate(0, -50%);
   width: 20px;
   height: 20px;
   background-color: #fff;
@@ -126,8 +137,8 @@ footer {
 }
 
 /* When the slider is checked, move the circle to the right and change its color */
-.slider:checked + .slider:before {
-  transform: translate(100%, -50%);
+input:checked + .slider:before {
+  transform: translate(20px, -50%);
   background-color: #333;
 }
 
@@ -139,3 +150,12 @@ footer {
 .sun {
   color: #333;
 }
+
+/* Image grid styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
