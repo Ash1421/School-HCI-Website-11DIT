@@ -1,172 +1,256 @@
 :root {
-  --color-bg: #f2f2f2; /* light gray */
-  --color-fg: #333; /* dark gray */
+  /* light gray */
+  --color-bg: #f2f2f2;
+  /* dark gray */
+  --color-fg: #333;
 }
 
 :root.dark {
-  --color-bg: #343434; /* dark gray */
-  --color-fg: #fff; /* white */
+  /* dark gray */
+  --color-bg: #343434;
+  /* white */
+  --color-fg: #fff;
 }
 
 body {
+  /* sans-serif font */
   font-family: Arial, sans-serif;
   margin: 0;
+  /* light gray */
   background-color: var(--color-bg);
 }
 
 nav {
+  /* 1.5rem padding on the top and bottom, 2rem padding on the left and right */
   padding: 1.5rem 2rem;
+  /* dark gray */
   background-color: var(--color-fg);
+  /* light gray */
   color: var(--color-bg);
   position: fixed;
   top: 0;
   left: 0;
+  /* 100% of the viewport width */
   width: 100%;
+  /* high z-index to make sure it appears above other elements */
   z-index: 1000;
 }
 
 .checkbtn {
+  /* 1.5rem font size */
   font-size: 1.5rem;
+  /* light gray */
   color: var(--color-bg);
+  /* make the cursor a pointer */
   cursor: pointer;
 }
 
 .nav-mobile {
+  /* hide the nav-mobile element by default */
   display: none;
+  /* absolute position to place it outside of the normal document flow */
   position: absolute;
+  /* 4.5rem padding on the top */
   top: 4.5rem;
+  /* 0 padding on the left */
   left: 0;
+  /* dark gray */
   background: var(--color-fg);
+  /* high z-index to make sure it appears above other elements */
   z-index: 1;
+  /* 200px width */
   width: 200px;
 }
 
 .nav-mobile a {
+  /* light gray */
   color: var(--color-bg);
+  /* 1rem padding on the top and bottom, 1.5rem padding on the left and right */
   padding: 1rem 1.5rem;
+  /* display as a block element */
   display: block;
 }
 
+/* show the nav-mobile element when the checkbox is checked */
 #check:checked ~ .nav-mobile {
   display: block;
 }
 
 main {
+  /* flexbox layout */
   display: flex;
+  /* column direction */
   flex-direction: column;
+  /* center the content horizontally */
   align-items: center;
-  padding-top: 8rem; /* add padding to the top of the page */
+  /* 8rem padding on the top */
+  padding-top: 8rem;
 }
 
 section {
+  /* dark gray */
   background-color: var(--color-fg);
+  /* 10px padding on all sides */
   padding: 10px;
+  /* 10px margin on the bottom */
   margin-bottom: 10px;
+  /* 0 0 10px rgba(0, 0, 0, 0.1) box shadow */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* 80% of the viewport width */
   width: 80%;
+  /* light gray */
   color: var(--color-bg);
 }
 
 h1 {
+  /* 18px font size */
   font-size: 18px;
+  /* 5px margin on the bottom */
   margin-bottom: 5px;
 }
 
 p {
+  /* 14px font size */
   font-size: 14px;
+  /* 10px margin on the bottom */
   margin-bottom: 10px;
 }
 
 footer {
+  /* dark gray */
   background-color: var(--color-fg);
+  /* light gray */
   color: var(--color-bg);
+  /* 10px padding on all sides */
   padding: 10px;
+  /* center the text horizontally */
   text-align: center;
+  /* clear both floats */
   clear: both;
 }
 
-/* Hide checkboxes */
+/* hide checkboxes */
 input[type="checkbox"] {
   display: none;
 }
 
-/* Add a label to toggle the theme */
+/* add a label to toggle the theme */
 .toggle_label {
+  /* fixed position to place it outside of the normal document flow */
   position: fixed;
+  /* 10px padding on the top */
   top: 10px;
+  /* 10px padding on the right */
   right: 10px;
+  /* high z-index to make sure it appears above other elements */
   z-index: 1000;
+  /* white */
   background-color: #fff;
+  /* 50% border radius */
   border-radius: 50%;
+  /* 10px padding on all sides */
   padding: 10px;
+  /* make the cursor a pointer */
   cursor: pointer;
+  /* display as a flexbox element */
   display: flex;
+  /* center the content horizontally and vertically */
   align-items: center;
   justify-content: center;
+  /* 50px width and height */
   width: 50px;
   height: 50px;
 }
 
 .toggle_label:hover {
+  /* light gray */
   background-color: #f0f0f0;
 }
 
-/* Add a slider to toggle the theme */
+/* add a slider to toggle the theme */
 .slider {
+  /* 40px width */
   width: 40px;
+  /* 20px height */
   height: 20px;
+  /* light gray */
   background-color: #ccc;
+  /* 10px border radius */
   border-radius: 10px;
+  /* relative position to place the before pseudo-element inside the slider */
   position: relative;
+  /* 0.4s transition */
   transition: 0.4s;
+  /* display as an inline-block element */
   display: inline-block;
 }
 
-/* Add a circle to the slider */
+/* add a circle to the slider */
 .slider:before {
-  content: "";
+  /* content: ""; */
   position: absolute;
+  /* 50% of the slider height */
   top: 50%;
+  /* 0 left */
   left: 0;
+  /* translate the circle to the left by 50% of its width */
   transform: translate(0, -50%);
+  /* 20px width and height */
   width: 20px;
   height: 20px;
+  /* white */
   background-color: #fff;
+  /* 50% border radius */
   border-radius: 50%;
+  /* 0.4s transition */
   transition: 0.4s;
 }
 
-/* When the slider is checked, move the circle to the right and change its color */
+/* when the slider is checked, move the circle to the right and change its color */
 input:checked + .slider:before {
+  /* translate the circle to the right by 20px */
   transform: translate(20px, -50%);
+  /* dark gray */
   background-color: #333;
 }
 
-/* Add classes to style the sun and moon emojis */
+/* add classes to style the sun and moon emojis */
 .moon {
+  /* white */
   color: #fff;
 }
 
 .sun {
+  /* dark gray */
   color: #333;
 }
 
-/* Image grid styling */
+/* image grid styling */
 img {
+  /* 100% of the parent width */
   max-width: 100%;
-  height: 250px;
+  /* 300px height */
+  height: 300px;
+  /* display as a block element */
   display: block;
+  /* center the image horizontally */
   margin: 0 auto;
 }
 
 .image-grid {
+  /* grid layout */
   display: grid;
+  /* 2 columns */
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  /* 5px gap between images */
+  gap: 5px;
 }
 
 .image-grid img {
+  /* 100% of the parent width */
   max-width: 100%;
-  height: 250px;
+  /* 300px height */
+  height: 300px;
+  /* display as a block element */
+  display: block;
 }
-
