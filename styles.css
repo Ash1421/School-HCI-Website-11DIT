@@ -143,7 +143,7 @@ input[type="checkbox"] {
   /* 10px padding on the right */
   right: 10px;
   /* high z-index to make sure it appears above other elements */
-  z-index: 1000;
+  z-index: 1001; /* Adjusted z-index */
   /* white */
   background-color: #fff;
   /* 50% border radius */
