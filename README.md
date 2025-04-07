@@ -7,7 +7,7 @@ This website is designed to educate its users about the city of Cologne.
 This project is open source, so you are free to fork it, modify it, and use it as you want. You can also use it as a learning tool or as a template to make your own website.
 
 **I will try to describe the finished code as good as i can, feel free to learn from it.**
-## Versioning Information
+## Versioning Information  
 
 This project uses semantic versioning to indicate changes:
 
@@ -23,7 +23,7 @@ For instance:
 The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
 
 ## The current version for the project is
- [![Version](https://img.shields.io/badge/Version-2.10.19-informational)](https://shields.io)
+ [![Version](https://img.shields.io/badge/Version-2.10.20-informational)](https://shields.io)
 
 ## Docker Setup
 
