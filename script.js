@@ -10,14 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             section.scrollIntoView({ behavior: "smooth" });
         });
     });
-    
-    // Add event listener to toggle dark mode on checkbox change
-    const checkbox = document.getElementById("checkbox");
-    checkbox.addEventListener("change", () => {
-        document.body.classList.toggle("dark");
-        console.log(`Dark mode is now ${checkbox.checked ? "enabled" : "disabled"}`);
-    });
-    
+
     // Add event listener to toggle responsive menu on icon click
     const menuIcon = document.getElementById("menu-icon");
     menuIcon.addEventListener("click", myFunction);
