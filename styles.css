@@ -12,6 +12,7 @@
 /* navigation.css */
 
 nav {
+  display: flex;
   /* 1.5rem padding on the top and bottom, 2rem padding on the left and right */
   padding: 1.5rem 2rem;
   /* dark gray */
@@ -25,17 +26,19 @@ nav {
   width: 100%;
   /* high z-index to make sure it appears above other elements */
   z-index: 1000;
-  /* 10px border radius */
+  /* no border radius at the top */
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .checkbtn {
+  display: block;
   /* 1.5rem font size */
   font-size: 1.5rem;
   /* light gray */
   color: var(--color-bg);
   /* make the cursor a pointer */
   cursor: pointer;
+  z-index: 1001;
 }
 
 .nav-mobile {
@@ -50,7 +53,7 @@ nav {
   /* dark gray */
   background: var(--color-fg);
   /* high z-index to make sure it appears above other elements */
-  z-index: 1;
+  z-index: 1001;
   /* 200px width */
   width: 200px;
   /* 10px border radius */
@@ -78,6 +81,7 @@ main {
   display: flex;
   /* column direction */
   flex-direction: column;
+  align-items: flex-start;
   /* center the content horizontally */
   align-items: center;
   /* 8rem padding on the top */
@@ -217,10 +221,11 @@ body.dark .support a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1001;
 }
 
 .fa-moon {
-  color: #f1c40f;
+  color: #8a8a8a;
 }
 
 .fa-sun {
@@ -241,4 +246,3 @@ body.dark .support a {
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
 }
-

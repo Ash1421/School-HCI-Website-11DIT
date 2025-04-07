@@ -17,4 +17,4 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.toggle("dark");
         console.log(`Dark mode is now ${checkbox.checked ? "enabled" : "disabled"}`);
     });
-
+});
