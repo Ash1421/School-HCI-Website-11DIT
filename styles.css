@@ -4,6 +4,7 @@
   --color-bg: #fff;
   --color-fg: #333;
   --border-radius: 10px;
+  --color-inside: #f5f5f5;
 }
 
 /* navigation.css */
@@ -14,7 +15,7 @@ nav {
   align-items: center; /* Center items vertically */
   padding: 1.5rem 2rem;
   background-color: var(--color-fg);
-  color: var(--color-bg);
+  color: var(--color-inside);
   position: fixed;
   top: 0;
   left: 0;
@@ -26,7 +27,7 @@ nav {
 .checkbtn {
   display: block;
   font-size: 1.5rem;
-  color: var(--color-bg);
+  color: var(--color-inside);
   cursor: pointer;
   z-index: 1001;
 }
@@ -43,7 +44,7 @@ nav {
 }
 
 .nav-mobile a {
-  color: var(--color-bg);
+  color: var(--color-inside);
   padding: 1rem 1.5rem;
   display: block;
 }
@@ -67,7 +68,7 @@ main {
 }
 
 section {
-  background-color: var(--color-bg);
+  background-color: var(--color-inside);
   padding: 10px;
   margin-bottom: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -88,7 +89,7 @@ p {
 
 footer {
   background-color: var(--color-fg);
-  color: var(--color-bg);
+  color: var(--color-inside);
   padding: 10px;
   text-align: center;
   clear: both;
@@ -195,4 +196,51 @@ body.dark nav {
 
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
+}
+
+.menu-toggle {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+.menu-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 5px;
+  background: #333;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+}
+
+.menu-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 5px;
+  background: #333;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+}
+
+.menu-toggle:checked::before {
+  transform: rotate(45deg);
+}
+
+.menu-toggle:checked::after {
+  transform: rotate(-45deg);
 }
