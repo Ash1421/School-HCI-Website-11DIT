@@ -17,4 +17,18 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.toggle("dark");
         console.log(`Dark mode is now ${checkbox.checked ? "enabled" : "disabled"}`);
     });
+    
+    // Add event listener to toggle responsive menu on icon click
+    const menuIcon = document.getElementById("menu-icon");
+    menuIcon.addEventListener("click", myFunction);
 });
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
