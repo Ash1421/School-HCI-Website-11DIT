@@ -10,26 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
             section.scrollIntoView({ behavior: "smooth" });
         });
     });
-
-    // Add event listener to theme toggle
-    const toggleButton = document.getElementById('mode');
-    toggleButton.addEventListener('change', () => {
-        if (toggleButton.checked) {
-            // Enable dark mode
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('mode', 'dark');
-        } else {
-            // Enable light mode
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('mode', 'light');
-        }
+    
+    // Add event listener to toggle dark mode on checkbox change
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+        console.log(`Dark mode is now ${checkbox.checked ? "enabled" : "disabled"}`);
     });
-
-    // Set initial theme based on local storage
-    const currentTheme = localStorage.getItem('mode');
-    if (currentTheme === 'dark') {
-        toggleButton.checked = true;
-        document.documentElement.classList.add('dark');
-    }
-});
 

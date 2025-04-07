@@ -1,24 +1,15 @@
+/* variables.css */
+
 :root {
   /* light gray */
   --color-bg: #f2f2f2;
   /* dark gray */
   --color-fg: #333;
+  /* 10px border radius */
+  --border-radius: 10px;
 }
 
-:root.dark {
-  /* dark gray */
-  --color-bg: #343434;
-  /* white */
-  --color-fg: #fff;
-}
-
-body {
-  /* sans-serif font */
-  font-family: Arial, sans-serif;
-  margin: 0;
-  /* light gray */
-  background-color: var(--color-bg);
-}
+/* navigation.css */
 
 nav {
   /* 1.5rem padding on the top and bottom, 2rem padding on the left and right */
@@ -34,6 +25,8 @@ nav {
   width: 100%;
   /* high z-index to make sure it appears above other elements */
   z-index: 1000;
+  /* 10px border radius */
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .checkbtn {
@@ -60,6 +53,8 @@ nav {
   z-index: 1;
   /* 200px width */
   width: 200px;
+  /* 10px border radius */
+  border-radius: var(--border-radius);
 }
 
 .nav-mobile a {
@@ -76,6 +71,8 @@ nav {
   display: block;
 }
 
+/* main.css */
+
 main {
   /* flexbox layout */
   display: flex;
@@ -85,6 +82,8 @@ main {
   align-items: center;
   /* 8rem padding on the top */
   padding-top: 8rem;
+  /* 10px border radius */
+  border-radius: var(--border-radius);
 }
 
 section {
@@ -100,6 +99,8 @@ section {
   width: 80%;
   /* light gray */
   color: var(--color-bg);
+  /* 10px border radius */
+  border-radius: var(--border-radius);
 }
 
 h1 {
@@ -127,102 +128,13 @@ footer {
   text-align: center;
   /* clear both floats */
   clear: both;
+  /* 10px border radius */
+  border-radius: var(--border-radius);
 }
 
 /* hide checkboxes */
 input[type="checkbox"] {
   display: none;
-}
-
-/* add a label to toggle the theme */
-.toggle_label {
-  /* fixed position to place it outside of the normal document flow */
-  position: fixed;
-  /* 10px padding on the top */
-  top: 10px;
-  /* 10px padding on the right */
-  right: 10px;
-  /* high z-index to make sure it appears above other elements */
-  z-index: 1001; /* Adjusted z-index */
-  /* white */
-  background-color: #fff;
-  /* 50% border radius */
-  border-radius: 50%;
-  /* 10px padding on all sides */
-  padding: 10px;
-  /* make the cursor a pointer */
-  cursor: pointer;
-  /* display as a flexbox element */
-  display: flex;
-  /* center the content horizontally and vertically */
-  align-items: center;
-  justify-content: center;
-  /* 50px width and height */
-  width: 50px;
-  height: 50px;
-}
-
-.toggle_label:hover {
-  /* light gray */
-  background-color: #f0f0f0;
-}
-
-/* add a slider to toggle the theme */
-.slider {
-  /* 40px width */
-  width: 40px;
-  /* 20px height */
-  height: 20px;
-  /* light gray */
-  background-color: #ccc;
-  /* 10px border radius */
-  border-radius: 10px;
-  /* relative position to place the before pseudo-element inside the slider */
-  position: relative;
-  /* 0.4s transition */
-  transition: 0.4s;
-  /* display as an inline-block element */
-  display: inline-block;
-}
-
-/* add a circle to the slider */
-.slider:before {
-  /* content: ""; */
-  position: absolute;
-  /* 50% of the slider height */
-  top: 50%;
-  /* 0 left */
-  left: 0;
-  /* translate the circle to the left by 50% of its width */
-  transform: translate(0, -50%);
-  /* 20px width and height */
-  width: 20px;
-  height: 20px;
-  /* white */
-  background-color: #fff;
-  /* 50% border radius */
-  border-radius: 50%;
-  /* 0.4s transition */
-  transition: 0.4s;
-}
-
-/* when the slider is checked, move the circle to the right and change its color */
-input:checked + .slider:before {
-  /* translate the circle to the right by 20px */
-  transform: translate(20px, -50%);
-  /* dark gray */
-  background-color: #333;
-}
-
-/* add classes to style the sun and moon emojis */
-.moon {
-  /* white */
-  color: #fff;
-}
-
-.sun {
-  /* dark gray */
-  color: #333;
 }
 
 /* image grid styling */
@@ -235,6 +147,8 @@ img {
   display: block;
   /* center the image horizontally */
   margin: 0 auto;
+  /* 10px border radius */
+  border-radius: var(--border-radius);
 }
 
 .image-grid {
@@ -244,6 +158,8 @@ img {
   grid-template-columns: repeat(2, 1fr);
   /* 5px gap between images */
   gap: 5px;
+  /* 10px border radius */
+  border-radius: var(--border-radius);
 }
 
 .image-grid img {
@@ -254,3 +170,75 @@ img {
   /* display as a block element */
   display: block;
 }
+
+/* dark mode toggle */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background-color: #292c35;
+}
+
+body.dark h1,
+body.dark .support a {
+  color: #fff;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+

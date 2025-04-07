@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Köln City</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- The toggle button is a checkbox with a label that has a class of "toggle_label". -->
-        <label class="toggle_label">
-            <!-- The input is a checkbox with an id of "mode" and a class of "toggle". -->
-            <input type="checkbox" id="mode" class="toggle">
-            <!-- The slider is a span with a class of "slider round". -->
-            <span class="slider round">
-                <!-- The moon and sun icons are i tags with classes of "fa-solid fa-moon fa-lg fa-spin moon" and "fa-solid fa-sun fa-spin fa-lg sun". -->
-                <i class="fa-solid fa-moon fa-lg fa-spin moon"></i>
-                <i class="fa-solid fa-sun fa-spin fa-lg sun"></i>
-            </span>
+    <div class="light-dark-toggle">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
         </label>
     </div>
     <nav>
@@ -116,3 +110,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
