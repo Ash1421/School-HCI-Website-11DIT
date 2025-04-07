@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Add event listener to toggle responsive menu on icon click
-    const menuIcon = document.getElementById("menu-icon");
-    menuIcon.addEventListener("click", myFunction);
+    // Add event listener to toggle dark mode on checkbox change
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+    });
 });
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
+function toggleMenu() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
@@ -25,3 +27,11 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+const themeToggler = document.getElementById("theme-toggler");
+themeToggler.addEventListener("click", toggleTheme);
+
+function toggleTheme() {
+    document.body.classList.toggle("light-theme");
+}
+
