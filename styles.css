@@ -1,11 +1,8 @@
 /* variables.css */
 
 :root {
-  /* light gray */
   --color-bg: #f2f2f2;
-  /* dark gray */
   --color-fg: #333;
-  /* 10px border radius */
   --border-radius: 10px;
 }
 
@@ -13,63 +10,42 @@
 
 nav {
   display: flex;
-  /* 1.5rem padding on the top and bottom, 2rem padding on the left and right */
   padding: 1.5rem 2rem;
-  /* dark gray */
   background-color: var(--color-fg);
-  /* light gray */
   color: var(--color-bg);
   position: fixed;
   top: 0;
   left: 0;
-  /* 100% of the viewport width */
   width: 100%;
-  /* high z-index to make sure it appears above other elements */
   z-index: 1000;
-  /* no border radius at the top */
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: 0;
 }
 
 .checkbtn {
   display: block;
-  /* 1.5rem font size */
   font-size: 1.5rem;
-  /* light gray */
   color: var(--color-bg);
-  /* make the cursor a pointer */
   cursor: pointer;
   z-index: 1001;
 }
 
 .nav-mobile {
-  /* hide the nav-mobile element by default */
   display: none;
-  /* absolute position to place it outside of the normal document flow */
   position: absolute;
-  /* 4.5rem padding on the top */
   top: 4.5rem;
-  /* 0 padding on the left */
   left: 0;
-  /* dark gray */
   background: var(--color-fg);
-  /* high z-index to make sure it appears above other elements */
   z-index: 1001;
-  /* 200px width */
   width: 200px;
-  /* 10px border radius */
   border-radius: var(--border-radius);
 }
 
 .nav-mobile a {
-  /* light gray */
   color: var(--color-bg);
-  /* 1rem padding on the top and bottom, 1.5rem padding on the left and right */
   padding: 1rem 1.5rem;
-  /* display as a block element */
   display: block;
 }
 
-/* show the nav-mobile element when the checkbox is checked */
 #check:checked ~ .nav-mobile {
   display: block;
 }
@@ -77,101 +53,64 @@ nav {
 /* main.css */
 
 main {
-  /* flexbox layout */
   display: flex;
-  /* column direction */
   flex-direction: column;
-  align-items: flex-start;
-  /* center the content horizontally */
   align-items: center;
-  /* 8rem padding on the top */
   padding-top: 8rem;
-  /* 10px border radius */
   border-radius: var(--border-radius);
 }
 
 section {
-  /* dark gray */
   background-color: var(--color-fg);
-  /* 10px padding on all sides */
   padding: 10px;
-  /* 10px margin on the bottom */
   margin-bottom: 10px;
-  /* 0 0 10px rgba(0, 0, 0, 0.1) box shadow */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* 80% of the viewport width */
   width: 80%;
-  /* light gray */
   color: var(--color-bg);
-  /* 10px border radius */
   border-radius: var(--border-radius);
 }
 
 h1 {
-  /* 18px font size */
   font-size: 18px;
-  /* 5px margin on the bottom */
   margin-bottom: 5px;
 }
 
 p {
-  /* 14px font size */
   font-size: 14px;
-  /* 10px margin on the bottom */
   margin-bottom: 10px;
 }
 
 footer {
-  /* dark gray */
   background-color: var(--color-fg);
-  /* light gray */
   color: var(--color-bg);
-  /* 10px padding on all sides */
   padding: 10px;
-  /* center the text horizontally */
   text-align: center;
-  /* clear both floats */
   clear: both;
-  /* 10px border radius */
-  border-radius: var(--border-radius);
+  border-radius: 0;
 }
 
-/* hide checkboxes */
 input[type="checkbox"] {
   display: none;
 }
 
-/* image grid styling */
 img {
-  /* 100% of the parent width */
   max-width: 100%;
-  /* 300px height */
   height: 300px;
-  /* display as a block element */
   display: block;
-  /* center the image horizontally */
   margin: 0 auto;
-  /* 10px border radius */
   border-radius: var(--border-radius);
 }
 
 .image-grid {
-  /* grid layout */
   display: grid;
-  /* 2 columns */
   grid-template-columns: repeat(2, 1fr);
-  /* 5px gap between images */
   gap: 5px;
-  /* 10px border radius */
   border-radius: var(--border-radius);
 }
 
 .image-grid img {
-  /* 100% of the parent width */
   max-width: 100%;
-  /* 300px height */
   height: 300px;
-  /* display as a block element */
   display: block;
 }
 
@@ -201,8 +140,13 @@ body.dark {
 }
 
 body.dark h1,
-body.dark .support a {
+body.dark .support a,
+body.dark section,
+body.dark footer,
+body.dark .nav-mobile a,
+body.dark nav {
   color: #fff;
+  background-color: #333;
 }
 
 .checkbox {
@@ -215,7 +159,9 @@ body.dark .support a {
   width: 50px;
   height: 26px;
   border-radius: 50px;
-  position: relative;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
   padding: 5px;
   cursor: pointer;
   display: flex;
@@ -224,12 +170,10 @@ body.dark .support a {
   z-index: 1001;
 }
 
-.fa-moon {
-  color: #8a8a8a;
-}
-
+.fa-moon,
 .fa-sun {
-  color: #f39c12;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 .checkbox-label .ball {
@@ -246,3 +190,4 @@ body.dark .support a {
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
 }
+
