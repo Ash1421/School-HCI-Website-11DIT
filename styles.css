@@ -5,6 +5,7 @@
   --color-fg: #333;
   --border-radius: 10px;
   --color-inside: #f5f5f5;
+  --color-inside-dark: #444;
 }
 
 /* navigation.css */
@@ -153,7 +154,7 @@ body.dark footer,
 body.dark .nav-mobile a,
 body.dark nav {
   color: #fff;
-  background-color: #333;
+  background-color: var(--color-inside-dark);
 }
 
 .checkbox {
