@@ -13,8 +13,8 @@ nav {
   justify-content: space-between; /* Ensure space for the hamburger menu */
   align-items: center; /* Center items vertically */
   padding: 1.5rem 2rem;
-  background-color: var(--color-fg);
-  color: var(--color-bg);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   position: fixed;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@ nav {
 .checkbtn {
   display: block;
   font-size: 1.5rem;
-  color: var(--color-bg);
+  color: var(--color-fg);
   cursor: pointer;
   z-index: 1001;
 }
@@ -36,14 +36,14 @@ nav {
   position: absolute;
   top: 4.5rem;
   left: 0;
-  background: var(--color-fg);
+  background: var(--color-bg);
   z-index: 1001;
   width: 200px;
   border-radius: var(--border-radius);
 }
 
 .nav-mobile a {
-  color: var(--color-bg);
+  color: var(--color-fg);
   padding: 1rem 1.5rem;
   display: block;
 }
@@ -87,8 +87,8 @@ p {
 }
 
 footer {
-  background-color: var(--color-fg);
-  color: var(--color-bg);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   padding: 10px;
   text-align: center;
   clear: both;
@@ -196,5 +196,4 @@ body.dark nav {
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
 }
-
 
