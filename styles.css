@@ -26,23 +26,47 @@ nav {
 }
 
 .topnav {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   padding: 1em;
   text-align: center;
+  position: relative;
+  border-radius: var(--border-radius);
 }
 
 .topnav a {
-  color: #fff;
+  color: var(--color-fg);
   text-decoration: none;
+  padding: 10px;
+  background-color: var(--color-inside);
+  border-radius: 5px;
+  margin: 0 5px;
+  display: inline-block;
 }
 
 .topnav a:hover {
   color: #ccc;
+  background-color: #555;
 }
 
 .topnav .icon {
   display: none;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.dark .topnav {
+  background-color: #333;
+  color: #333;
+}
+
+.dark .topnav .icon {
+  background-color: var(--color-inside-dark);
+  color: #fff;
+  display:block;
 }
 
 @media only screen and (max-width: 768px) {
@@ -59,6 +83,8 @@ nav {
     right: 10px;
     font-size: 24px;
     cursor: pointer;
+    background-color: #333;
+    border-radius: 50%;
   }
   .topnav.responsive {
     position: relative;
@@ -79,6 +105,20 @@ nav {
     font-size: 24px;
     cursor: pointer;
   }
+}
+
+.dark .topnav.responsive {
+  background-color: var(--color-inside-dark);
+  color: #fff;
+}
+
+.dark .topnav.responsive a {
+  color: #333;
+}
+
+.dark .topnav.responsive a:hover {
+  color: #fff;
+  background-color: #333;
 }
 
 .checkbtn {
@@ -174,8 +214,8 @@ img {
 }
 
 .image-grid img {
-  max-width: 100%;
-  height: 300px;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -339,5 +379,33 @@ body.dark nav {
 
 .checkbox-theme:checked + .checkbox-theme-label .ball-theme {
   transform: translateX(24px);
+}
+
+@media (max-width: 768px) {
+  .topnav .icon {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .topnav.responsive .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-grid img {
+    width: 100%;
+    height: auto;
+  }
 }
 
