@@ -14,11 +14,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: space-between; /* Ensure space for the hamburger menu */
-  align-items: center; /* Center items vertically */
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 2rem;
-  background-color: var(--color-fg);
-  color: var(--color-inside);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   position: fixed;
   top: 0;
   left: 0;
@@ -27,36 +27,31 @@ nav {
   border-radius: 0;
 }
 
-/* Add a black background color to the top navigation */
 .topnav {
-  background-color: var(--color-fg);
+  background-color: var(--color-bg);
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   display: block;
-  color: var(--color-inside);
+  color: var(--color-fg);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }
@@ -90,7 +85,7 @@ nav {
 .checkbtn {
   display: block;
   font-size: 1.5rem;
-  color: var(--color-inside);
+  color: var(--color-fg);
   cursor: pointer;
   z-index: 1001;
 }
@@ -100,14 +95,14 @@ nav {
   position: absolute;
   top: 4.5rem;
   left: 0;
-  background: var(--color-fg);
+  background: var(--color-bg);
   z-index: 1001;
   width: 200px;
   border-radius: var(--border-radius);
 }
 
 .nav-mobile a {
-  color: var(--color-inside);
+  color: var(--color-fg);
   padding: 1rem 1.5rem;
   display: block;
 }
@@ -128,6 +123,7 @@ main {
   align-items: center;
   padding-top: 8rem;
   border-radius: var(--border-radius);
+  margin-bottom: 10rem;
 }
 
 section {
@@ -151,8 +147,8 @@ p {
 }
 
 footer {
-  background-color: var(--color-fg);
-  color: var(--color-inside);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   padding: 10px;
   text-align: center;
   clear: both;
