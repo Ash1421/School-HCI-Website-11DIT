@@ -409,3 +409,16 @@ body.dark nav {
   }
 }
 
+/* Styles for iOS devices */
+.ios-device {
+}
+
+/* Styles for Android devices */
+.android-device {
+}
+
+/* Styles for desktop devices */
+.desktop-device {
+  .desktop-device .topnav 
+  display: none;
+}

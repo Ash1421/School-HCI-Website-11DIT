@@ -52,3 +52,16 @@ menuLinks.forEach(link => {
     toggleMenu();
   });
 });
+
+const userAgent = navigator.userAgent;
+
+if (userAgent.match(/iPhone|iPad|iPod/i)) {
+    // Apply styles for iOS devices
+    document.body.classList.add('ios-device');
+} else if (userAgent.match(/Android/i)) {
+    // Apply styles for Android devices
+    document.body.classList.add('android-device');
+} else {
+    // Apply styles for desktop devices
+    document.body.classList.add('desktop-device');
+}
