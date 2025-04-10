@@ -69,6 +69,13 @@ nav {
   display:block;
 }
 
+@media only screen and (min-width: 769px) {
+  .dark .topnav {
+    background-color: #333;
+    color: #333;
+    display: none;
+  }
+}
 @media only screen and (max-width: 768px) {
   .topnav {
     position: relative;
@@ -407,18 +414,4 @@ body.dark nav {
     width: 100%;
     height: auto;
   }
-}
-
-/* Styles for iOS devices */
-.ios-device {
-}
-
-/* Styles for Android devices */
-.android-device {
-}
-
-/* Styles for desktop devices */
-.desktop-device {
-  .desktop-device .topnav.dark 
-  display: none;
 }

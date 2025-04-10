@@ -23,7 +23,7 @@ For instance:
 The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
 
 ## The current version for the project is
- [![Version](https://img.shields.io/badge/Version-3.14.31-informational)](https://shields.io)
+ [![Version](https://img.shields.io/badge/Version-3.15.32-informational)](https://shields.io)
 
 ## Docker Setup
 
