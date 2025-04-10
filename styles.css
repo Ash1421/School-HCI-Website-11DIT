@@ -419,6 +419,6 @@ body.dark nav {
 
 /* Styles for desktop devices */
 .desktop-device {
-  .desktop-device .topnav 
+  .desktop-device .topnav.dark 
   display: none;
 }
