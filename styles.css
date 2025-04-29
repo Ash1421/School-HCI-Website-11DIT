@@ -69,6 +69,18 @@ nav {
   display:block;
 }
 
+@media only screen and (min-width: 769px) {
+  .dark .topnav a.icon {
+    display: none;
+  }
+  .dark .topnav.responsive {
+    position: relative;
+  }
+  .dark .topnav.responsive a {
+    display: inline-block;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .topnav {
     position: relative;
