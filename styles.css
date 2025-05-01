@@ -425,3 +425,9 @@ body.dark nav {
     height: auto;
   }
 }
+
+.icon::before {
+  content: "\f0c9"; /* fa-bars */
+  font-family: "FontAwesome";
+  font-size: 24px;
+}
