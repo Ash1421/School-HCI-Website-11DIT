@@ -431,3 +431,9 @@ body.dark nav {
   font-family: "FontAwesome";
   font-size: 24px;
 }
+
+#map {
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+}
