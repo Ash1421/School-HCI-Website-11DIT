@@ -63,7 +63,10 @@
                 <img src="Images/V2.4.2-Images/Kolsch_coaster.JPG" alt="Kolsch Wagon Wheel Coaster">
             </div>
         </section>
-        <div id="map" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 10px;"></div>
+        <div id="map"></div>
+        <div style="display: flex; justify-content: center;">
+            <div id="map" style="width: 80%; height: 600px;"></div>
+        </div>
         <script>
             var map = L.map('map').setView([50.93, 6.95], 12);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
