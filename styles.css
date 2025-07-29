@@ -437,3 +437,73 @@ body.dark nav {
   height: 600px;
   margin: 20px auto;
 }
+
+/* Footer License Styling */
+.site-footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 3px solid #3498db;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.license-info {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.license-info p {
+    margin: 8px 0;
+}
+
+.license-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.license-link:hover {
+    color: #5dade2;
+    text-decoration: underline;
+}
+
+.license-details-link {
+    color: #95a5a6;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.license-details-link:hover {
+    color: #bdc3c7;
+    text-decoration: underline;
+}
+
+.license-description {
+    font-size: 12px;
+    color: #95a5a6;
+    margin-top: 12px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 15px 0;
+    }
+    
+    .license-info {
+        font-size: 13px;
+    }
+    
+    .footer-content {
+        padding: 0 15px;
+    }
+}

@@ -23,7 +23,7 @@ For instance:
 The project starts at `V1.0.0`, reflecting a stable base with plans for further enhancements and testing.
 
 ## The current version for the project is
- [![Version](https://img.shields.io/badge/Version-3.15.49-informational)](https://shields.io)
+ [![Version](https://img.shields.io/badge/Version-3.16.49-informational)](https://shields.io)
 
 ## Docker Setup
 
@@ -47,9 +47,34 @@ The site will be accessible at:
 
 **Please note if you are hosting it on a remote machine you will need to chage the ip from localhost, or port forward to access the site.**
 
+## License
 
-# License
+This project is licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
 
-- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+### What this means:
 
-<i class="fa fa-copyright" aria-hidden="true"></i> This project is licensed under the [MIT LICENSE](LICENSE).
+✅ **You can:**
+- Use this code for learning and educational purposes
+- Share and redistribute the code
+- Modify and adapt the code for non-commercial projects
+- Create your own educational websites based on this template
+
+❌ **You cannot:**
+- Use this code for commercial purposes or sell it
+- Remove attribution to the original author
+- License derivative works under different terms
+
+### Requirements:
+- **Attribution** — Credit the original author
+- **NonCommercial** — No commercial use
+- **ShareAlike** — Derivative works must use the same license
+
+### Quick Attribution Example:
+```
+Based on Cologne Educational Website by Ash1421
+Licensed under CC BY-NC-SA 4.0
+GitHub: https://github.com/Ash1421/School-HCI-Website-11DIT
+```
+
+📄 **Full License:** [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+.
